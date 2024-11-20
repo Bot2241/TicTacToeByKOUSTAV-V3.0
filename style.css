@@ -1,0 +1,145 @@
+/* Body Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #ffdd00, #ff8800); /* Yellow to Orange Gradient */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%; /* Ensures body takes full width */
+  overflow: hidden; /* Prevent horizontal and vertical overflow */
+  color: #333;
+}
+
+/* Game Container Styling */
+#game-container {
+  background: linear-gradient(to bottom right, #7ec8e3, #9a6fdf); /* Light Blue to Purple Gradient */
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 350px;
+  max-width: 100%; /* Ensures responsiveness */
+  text-align: center;
+  overflow: hidden; /* Ensures rounded corners look nice */
+}
+
+/* Status Display Styling */
+#status {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+/* Game Board Styling */
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 10px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+/* Cell Styling */
+.cell {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(to bottom, #ffffff, #f2f2f2);
+  border-radius: 15px; /* Make the corners rounded */
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+/* Hover Animation for Cells */
+.cell:hover {
+  background: linear-gradient(to bottom, #ffe29f, #ffa65c); /* Orange-yellow gradient on hover */
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* X and O Styling */
+.cell.X {
+  color: #ffffff; /* White Color for X for better visibility */
+  font-family: 'Arial', sans-serif; /* A softer font for the X symbol */
+}
+
+.cell.O {
+  color: #ffffff; /* White Color for O for better visibility */
+}
+
+/* Taken Cells */
+.cell.taken {
+  cursor: not-allowed;
+}
+
+/* Pink-Red Gradient for Cell After Move */
+.cell.move {
+  background: linear-gradient(45deg, #ff77a9, #ff3b64);
+  transition: background 0.5s ease;
+}
+
+/* Popup Styling */
+.popup {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.popup h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #444;
+}
+
+/* Play Again Button Styling */
+#new-game-button {
+  padding: 12px 25px;
+  background: linear-gradient(to bottom right, #e63946, #d32f2f); /* Gradient red by default */
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background 0.4s ease, transform 0.3s ease;
+}
+
+#new-game-button:hover {
+  background: linear-gradient(to bottom right, #ff758f, #ff4b5c); /* Smooth pink-red gradient */
+  transform: scale(1.08); /* Slight zoom on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 400px) {
+  #game-board {
+    grid-template-columns: repeat(3, 80px);
+  }
+  .cell {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+  }
+}
