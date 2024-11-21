@@ -1,3 +1,8 @@
+html, body {
+  overscroll-behavior: none; /* Prevent overscroll effects */
+  touch-action: none; /* Disable elastic scrolling */
+}
+
 /* Body Styling */
 body {
   font-family: 'Poppins', sans-serif;

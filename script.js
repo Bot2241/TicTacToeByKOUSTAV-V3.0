@@ -68,8 +68,8 @@ function handleCellClick(event) {
 function aiMove() {
   let move;
 
-  // 85% optimal move, 15% random
-  if (Math.random() < 0.85) {
+  // 80% optimal move, 20% random
+  if (Math.random() < 0.8) { // Adjusted from 85% to 80%
     move = findBestMove();
   } else {
     move = findRandomMove();
