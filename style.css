@@ -1,22 +1,20 @@
 html, body {
+  height: 100%; /* Make sure body stretches to viewport height */
+  margin: 0;
+  padding: 0;
   overscroll-behavior: none; /* Prevent overscroll effects */
   touch-action: none; /* Disable elastic scrolling */
 }
 
-/* Body Styling */
 body {
   font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(to bottom right, #ffdd00, #ff8800); /* Yellow to Orange Gradient */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  width: 100%; /* Ensures body takes full width */
-  overflow: hidden; /* Prevent horizontal and vertical overflow */
+  background: linear-gradient(to bottom right, #ffdd00, #ff8800); /* Yellow to Orange Gradient */
   color: #333;
+  overflow: hidden;
 }
 
 /* Game Container Styling */
