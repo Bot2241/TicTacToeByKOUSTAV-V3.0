@@ -179,14 +179,3 @@ newGameButton.addEventListener("click", resetGame);
 
 // Initialize game on page load
 initializeGame();
-
-// Dynamically adjust the height to avoid black bars
-function adjustHeight() {
-  const gameContainer = document.getElementById("game-container");
-  gameContainer.style.height = `${window.innerHeight}px`;
-}
-
-// Adjust height on load and resize
-window.addEventListener("load", adjustHeight);
-window.addEventListener("resize", adjustHeight);
-
